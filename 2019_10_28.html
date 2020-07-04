@@ -1,0 +1,105 @@
+<script type="text/javascript">
+	var output_date = setInterval(
+	function(){ 
+		var tdate = new Date();
+
+		tyears = tdate.getFullYear();
+		tmonths = tdate.getMonth()+1;
+		tdates = tdate.getDate();
+		thours = tdate.getHours();
+		tminutes = tdate.getMinutes();
+		tseconds = tdate.getSeconds();
+
+		outputtime.innerHTML= tyears + "년 " + tmonths + "월 " + tdates + "일 " + thours + "시 " + tminutes + "분 " + tseconds + "초";
+		}, 1000);
+
+	function timer_start(){
+		var t_input = prompt("시간을 초 단위로 입력하세요");
+
+		t_input *= 1000;
+
+		var alert_timer = setTimeout(function(){
+			alert("종료시간입니다!");
+			}, t_input);
+	}
+	function openpop(siteNAME){
+		sc_wid = screen.width;
+		sc_hei = screen.height;
+	
+		op_top = sc_hei / 2 - 100;
+		op_lt = sc_wid / 2 - 200;
+
+		if (siteNAME == "kbs")
+		{
+			siteURL = "http://www.kbs.co.kr";
+		}else if (siteNAME == "mbc")
+		{
+			siteURL = "http://www.imbc.com";
+		}else{
+			siteURL = "https://www.sbs.co.kr";
+		}
+
+		var opensite = window.open(siteURL, "", "width=400, height=200");
+		opensite.moveTo(op_lt, op_top);
+
+		// 사이트를 1초마다 이동시키는건 맞으나
+		// 보안상 주소가 다를 경우 제어할 수 없음
+		/*
+		var moveSite = setInterval(function(){
+			op_top+=1;
+			op_lt+=1;
+			opensite.moveTo(op_lt, op_top);
+			}, 1000);
+		*/
+
+
+
+	}
+</script>
+<style>
+	ul li:hover{
+		cursor:pointer;
+	}
+	.spbr{
+		margin-top: 500px;
+	}
+</style>
+<ul id="m0">
+	<li onclick="location.hash='m1';">현재 날짜 시간 출력</li>
+	<li onclick="location.hash='m2';">x초 후 메세지 출력</li>
+	<li onclick="location.hash='m3';">팝업창 띄우기</li>
+</ul>
+<hr>
+	<input type="button" value="이전" onclick="history.back();" />
+	<input type="button" value="다음" onclick="history.forward();" />
+	<input type="button" value="맨위" onclick="location.hash='m0';" />
+	<input type="button" value="맨밑" onclick="location.hash='m3';" />
+
+<div id="m1" class="spbr">
+	<span id="outputtime"></span>
+	<hr>
+	<input type="button" value="이전" onclick="history.back();" />
+	<input type="button" value="다음" onclick="history.forward();" />
+	<input type="button" value="맨위" onclick="location.hash='m0';" />
+	<input type="button" value="맨밑" onclick="location.hash='m3';" />
+</div>
+
+<div id="m2" class="spbr">
+	<input type="button" value="타이머 실행" onclick="timer_start();">
+	<hr>
+	<input type="button" value="이전" onclick="history.back();" />
+	<input type="button" value="다음" onclick="history.forward();" />
+	<input type="button" value="맨위" onclick="location.hash='m0';" />
+	<input type="button" value="맨밑" onclick="location.hash='m3';" />
+</div>
+
+<div id="m3" class="spbr">
+	<input type="button" value="kbs" onclick="openpop(this.value);">
+	<input type="button" value="mbc" onclick="openpop(this.value);">
+	<input type="button" value="sbs" onclick="openpop(this.value);">
+	<hr>
+	<input type="button" value="이전" onclick="history.back();" />
+	<input type="button" value="다음" onclick="history.forward();" />
+	<input type="button" value="맨위" onclick="location.hash='m0';" />
+	<input type="button" value="맨밑" onclick="location.hash='m3';" />
+</div>

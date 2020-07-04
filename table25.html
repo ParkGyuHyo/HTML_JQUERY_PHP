@@ -1,0 +1,22 @@
+<script type="text/javascript">
+
+var t = "<table border=\"1\" width=500px height=500px>";
+var k = 1;
+
+for (i=0; i<5; i++)
+{
+	t += "<tr>";
+
+	for (j=0; j<5; j++)
+	{
+		t += "<td style=\"text-align:center;\">" + i +", " + j + "<br>" + k + "</td>";
+		k++;
+	}
+
+	t += "</tr>";
+}
+
+t += "</table>";
+
+document.write(t);
+</script>

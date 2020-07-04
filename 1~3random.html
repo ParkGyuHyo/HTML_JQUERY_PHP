@@ -1,0 +1,20 @@
+<script type="text/javascript">
+
+rnum = [0, 0, 0, 0];
+	
+	for (i=1; i<=100; i++)
+	{
+		rNumber = Math.floor(Math.random() * (3 -1 +1)+1);
+
+		document.write(rNumber + " ");
+
+		rnum[rNumber] += 1;
+	}
+
+	document.write("<hr>");
+
+	for (j=1; j<=3; j++)
+	{
+		document.write(j + " : " + rnum[j] + "<br/>");
+	}
+</script>

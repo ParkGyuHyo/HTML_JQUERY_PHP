@@ -1,0 +1,25 @@
+<script type="text/javascript">
+
+var chknum = new Array();
+var ij;
+
+for (i=0; i<=4; i++)
+{
+	rnum = Math.floor(Math.random()*(5 -1 +1)+1);
+	
+	for (j=0; j<=chknum.length-1; j++)
+	{
+
+		if (chknum[j] == rnum)
+		{
+			i--;
+			break;
+		}
+
+	}
+	chknum[j] = rnum;
+}
+
+document.write(chknum);
+
+</script>

@@ -1,0 +1,15 @@
+<script type="text/javascript">
+
+var sDate = new Date(2019, 0, 1);
+var fDate = new Date(2019, 2, 1);
+
+var sSeconds = sDate.getTime();
+var fSeconds = fDate.getTime();
+
+var rSeconds = fSeconds - sSeconds;
+
+var rDate = Math.ceil(rSeconds / (1000 * 60 * 60 * 24))+1;
+
+document.write(rDate + "일");
+
+</script>

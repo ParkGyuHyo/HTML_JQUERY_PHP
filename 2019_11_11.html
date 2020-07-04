@@ -1,0 +1,136 @@
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	
+	$("#p1").click(function(){
+		$("#i3").html("class:" + $("#i3").attr("class") + $("#i3").html());
+	});
+
+	$("#pr1").click(function(){
+		$("#i3").html(" 여기는 h1의 3333 ");
+	});
+
+	$("#p2").click(function(){
+		var tag_name = $(".c2");
+		var class_cnt = tag_name.length;
+
+		for (var i=0; i<class_cnt; i++)
+		{
+			class_Name = tag_name.eq(i).attr("class");
+			id_Name = tag_name.eq(i).attr("id");
+			inner_tag = tag_name.eq(i).html();
+
+			tag_name.eq(i).html(tag_name[i].tagName + " " + class_Name + " " + id_Name + " " + inner_tag);
+		}
+
+	});
+
+	$("#p3").click(function(){
+		var tag_name1 = $("h1[name=n2]");
+		var tag_name2 = $("h2[name=n2]");
+
+		var tag_cnt1 = tag_name1.length;
+		var tag_cnt2 = tag_name2.length;
+
+		for (var i=0; i<tag_cnt1; i++)
+		{
+			class_Name = tag_name1.eq(i).attr("class");
+			id_Name = tag_name1.eq(i).attr("id");
+			inner_tag = tag_name1.eq(i).html();
+
+			tag_name1.eq(i).html(tag_name1[i].tagName + " " + class_Name + " " + id_Name + " " + inner_tag);
+		}
+
+		for (var i=0; i<tag_cnt2; i++)
+		{
+			class_Name = tag_name2.eq(i).attr("class");
+			id_Name = tag_name2.eq(i).attr("id");
+			inner_tag = tag_name2.eq(i).html();
+
+			tag_name2.eq(i).html(tag_name2[i].tagName + " " + class_Name + " " + id_Name + " " + inner_tag);
+		}
+
+	});
+
+	$("#p4").click(function(){
+		var tag_name = $("h2");
+		var class_cnt = tag_name.length;
+
+		for (var i=0; i<class_cnt; i++)
+		{
+			class_Name = tag_name.eq(i).attr("class");
+			id_Name = tag_name.eq(i).attr("id");
+			inner_tag = tag_name.eq(i).html();
+
+			tag_name.eq(i).html(tag_name[i].tagName + " " + class_Name + " " + id_Name + " " + inner_tag);
+		}
+
+	});
+
+	$("#i8").mouseover(function(){
+		$(this).css("color","green").css("background","black");
+
+		$("#i8_msg").html("마우스 올림");
+	});
+
+	$("#i8").mouseout(function(){
+		$(this).css("color","red").css("background","pink");
+
+		$("#i8_msg").html("마우스 나감");
+	});
+
+	var focus_cnt = 0;
+	var blur_cnt = 0;
+/*
+	$("#lst_txt").focus(function(){
+		if (focus_cnt == 0)
+		{
+			alert("5글자 이상 입력하시오.");
+		}
+		focus_cnt++;
+		blur_cnt=0;
+	});
+
+	$("#lst_txt").blur(function(){
+		if (blur_cnt == 0 && $("#lst_txt").val() != "")
+		{
+			if ($("#lst_txt").val().length < 5)
+			{
+				alert("5글자가 아닙니다.");
+			}
+		}
+		blur_cnt++;
+		focus_cnt=0;
+	});
+*/
+
+});
+</script>
+
+<pre>
+<input type="button" value="[문제1]" id="p1" /> 버튼을 클릭하면 id가 "id3"인 객체를 선택하여 "InnerHTML 값"을  "class명 + innerHTML"로 변경
+<input type="button" value="[문제1R]" id="pr1" /> 버튼을 클릭하면 문제 1]실행전의 값으로 변경
+<input type="button" value="[문제2]" id="p2" /> 버튼을 클릭하면 class가 "c2"인 객체들을 선택하여  "InnerHTML 값"을  "태그명 class명 id명  + innerHTML로 변경 
+<input type="button" value="[문제3]" id="p3" /> 버튼을 클릭하면 name이 "n2"인 객체들을 선택하여  "InnerHTML 값"을  "태그명 class명 id명  + innerHTML로 변경    
+<input type="button" value="[문제4]" id="p4" /> 버튼을 클릭하면 태그가 "h2"인 객체들을 선택하여  "InnerHTML 값"을  "태그명 class명 id명  + innerHTML로 변경 
+id가 "i8"인 객체에 마우스가 onmouseover onmouseout 이벤트가 발생하면  글자색 및 배경색을 변경하고 [메시지 출력]에 해당  이벤트사항 출력
+<input type="button" value="[문제6]" id="p6" /> input type="tetxt" 인 객체를 만들고 입력사항을 체크(onbluer onfocus)
+</pre>
+
+<h1 class="c1" name="n1" id="i1"> 여기는 h1의 1111 </h1>
+
+<h2 class="c1" name="n2" id="i2"> 여기는 h2의 2222 </h2>
+
+<h1 class="c2" name="n2" id="i3"> 여기는 h1의 3333 </h1>
+
+<h2 class="c1" name="n1" id="i4"> 여기는 h3의 4444 </h2>
+
+<h1 class="c2" name="n2" id="i5"> 여기는 h1의 6666 </h1>
+
+<h2 class="c2" name="n2" id="i6"> 여기는 h2의 7777  </h2>  
+
+<h1 class="c8" name="n8" id="i8"> 여기는 여기에 마우스를 올려보세요   </h1>
+<p id="i8_msg">[메세지출력]</p>
+
+<input type="text" value="" id="lst_txt" />

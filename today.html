@@ -1,0 +1,16 @@
+<script type="text/javascript">
+	var Today = new Date();
+
+	nowYear = Today.getFullYear();
+	nowMonth = Today.getMonth()+1;
+	nowDate = Today.getDate();
+	nowDay = Today.getDay();
+	nowHour = Today.getHours();
+	nowMinute = Today.getMinutes();
+	nowSecond = Today.getSeconds();
+
+	yoil = ['일', '월', '화', '수', '목', '금', '토'];
+
+	document.write(nowYear + "년" + nowMonth + "월" + nowDate + "일" + " " + yoil[nowDay] + "요일 " + nowHour + "시" + nowMinute + "분" + nowSecond + "초");
+
+</script>

@@ -1,0 +1,28 @@
+﻿<script type="text/javascript">
+var integer = prompt("숫자 5개를 입력하시오.(구분은 띄어쓰기)", "");
+
+integer = integer.split(" ");
+
+for (i=0; i<=integer.length-2; i++)
+{
+	for (j=i+1; j<=integer.length-1; j++)
+	{
+		if (integer[i] > integer[j])
+		{
+			var temp = integer[i];
+			integer[i] = integer[j];
+			integer[j] = temp;
+		}
+	}
+}
+
+old_i = 1;
+for (i=0; i<integer.length; i++)
+{
+	var m = (integer[i] == integer[i-1]) ? m = old_i : m = i+1;
+	var finish = (i == integer.length-1) ? "" : ", ";
+
+		document.write(integer[i] + "-" + (m) + finish);
+		old_i = m;
+}
+</script>

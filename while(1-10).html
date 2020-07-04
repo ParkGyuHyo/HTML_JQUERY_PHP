@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<title>201987062 박규효 HTML5</title>
+</head>
+<body>
+<script type="text/javascript">
+
+function onetoten(){
+	var i = 0;
+	var bspan = document.getElementById("bspan");
+	while (i <= 10)
+	{
+		bspan.innerHTML += i + ", <br>";
+		i++;
+	}
+}
+
+</script>
+
+<button onclick="onetoten();">클릭</button>
+<hr>
+<span id="bspan"></span>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="l.bsks.ac.kr" id="3af94486-6e66-4ceb-ae72-2a6dbef3f797" port="22" nameFormat="DESCRIPTIVE" username="p201987062" />
+    </configs>
+  </component>
+</project>

@@ -1,0 +1,179 @@
+html{ width:100%; height:100%; padding:0; margin:0; font-family:initial; color:#333; position:relative; margin:0; font-size:14px;}
+body{ padding:0; margin:0; font-family:'Noto Sans KR'; font-size:14px;}
+
+label{margin:0; cursor:pointer;}
+
+input:focus { outline: none; }
+
+.section_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+
+    padding: 20px;
+    min-width: 300px;
+
+    background: #fff;
+    border-radius: 7px;
+    border: 2px solid #5679e8;
+    box-shadow: 1px 1px 7px #aaaaaa;
+
+    text-align: center;
+}
+
+.user_list_section_center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 20px;
+
+    background: #fff;
+    border-radius: 7px;
+    border: 2px solid #5679e8;
+    box-shadow: 1px 1px 7px #aaaaaa;
+
+    text-align: center;
+}
+
+hr {
+    border: 1px solid #7b7b7b;
+    margin-bottom: 0px;
+}
+
+.login_form h3, .regi_form h3, .my_info h3, .user_list h3 {
+    margin-top: 5px;
+    color: #7b7b7b;
+    letter-spacing: 3px;
+}
+
+.my_info p {
+    text-align: left;
+}
+
+.login_form form, .regi_form form {
+    margin-top: 0px;
+    background: #eeeeee;
+    padding: 10px;
+}
+
+.login_form form p {
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.regi_form table {
+    width: 100%;
+}
+
+.regi_form form table tr th {
+    text-align: right;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.regi_form table tr td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.regi_form form table tr:last-child td:last-child{
+    text-align: center;
+    border-bottom: 0px;
+}
+
+.regi_form table tr td input[type='text'] {
+    width: 100px;
+    vertical-align: middle;
+}
+
+.regi_form table tr td input[name='userPhone1'],
+.regi_form table tr td input[name='userPhone3'],
+.regi_form table tr td input[name='userPhone2'] {
+    width: 50px;
+}
+
+input {
+    border: 1px solid #7b7b7b;
+    padding: 5px;
+}
+
+input[type='submit'] {
+    width: 100px;
+}
+
+input[name='btn_regi'], input[type='reset'] {
+    width: 100px;
+}
+
+.btn_blue {
+    border: 0px;
+    background: #5679e8;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn_red {
+    border: 0px;
+    background: #e8565b;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.regi_form table tr td input[name='userEmail'] {
+    width: 200px;
+}
+
+input[type='radio'] {
+    width: auto;
+}
+
+p#idErrMsg, p#pwdErrMsg {
+    margin: 0px;
+    color: red;
+    display: none;
+    font-size: 12px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table.simple_table{ border-top:2px solid #79bb33; text-align:center; clear:both; background:#fff; }
+table.simple_table tr{ border-bottom:1px solid #ddd; }
+table.simple_table th{ padding:10px 0px; background:#F9F9F9; font-weight:bold;  font-size:13px; }
+table.simple_table td{ padding:9px 0px; font-size:12px; }
+
+.simple_board {border-top: 2px solid #09418b; border-bottom: 2px solid #09418b; font-size: 0.93rem; margin:20px auto; word-break:keep-all;}
+.simple_board thead tr th {text-align:center; color:#09418b; background: #f7f7f7; padding:8px 5px; border-right: 1px solid #ccc; border-bottom: 1px solid #09418b;vertical-align: middle;}
+.simple_board thead tr th:last-child {border-right:0;}
+.simple_board tbody tr th {padding: 8px 5px; text-align: center; background:#f7f7f7; color:#09418b; border-bottom: 1px solid #ccc; border-right:1px solid #ddd; vertical-align:middle;}
+.simple_board tbody tr th:last-child {border-right:0;}
+.simple_board tbody tr td {padding: 8px 5px; text-align: center; border-bottom: 1px solid #ccc; border-right:1px solid #ddd; vertical-align: middle;}
+.simple_board tbody tr td:last-child {border-right:0;}
+
+table.tbw800 {
+    width: 900px;
+}
+
+.left { text-align: left; }
+.right { text-align: right; }
+
+.edit_txt { font-weight: bold; color: #09418b; text-decoration: underline; cursor: pointer; }
+
+.radio {
+    margin-top: -3px;
+}
+
+input[type='text'], input[type='password'], input[type='number']{/*  width:100%;  */ font-size:1rem; border:1px solid #ccc; box-sizing:border-box; }
+input[type=checkbox], input[type=radio]{vertical-align:middle; cursor:pointer;}
+
+.btn_major{display:inline-block; background:#09418b; border: 2px solid #09418b; font-weight:800; color: #ffffff!important;border-radius:4px;padding:3px 10px;font-size:0.93rem; margin:2px 0; cursor:pointer;}
+.btn_major:hover{background:#23b5c9; color: #ffffff; border: 2px solid #23b5c9; transition:200ms ease-out all;}
+.btn_red{display:inline-block;background:#ef2e74; border: 2px solid #ef2e74; font-weight:800; color: #ffffff;border-radius:4px;padding:3px 10px;font-size:0.93rem; margin:2px 0; cursor:pointer;}
+.btn_red:hover{background:#ffffff; color:#ef2e74; transition:200ms ease-out all;}

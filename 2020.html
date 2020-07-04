@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	
+var Ryear = 2020;
+var Fyear = 2030;
+
+
+var Syoil = ['일','월','화','수','목','금','토'];
+
+
+for (i=Ryear; i<=Fyear; i++)
+{
+	Fyoil = new Date(i, 0, 1);
+	
+	yoil = Fyoil.getDay();
+
+	document.write(i + "년" + " 1월 1일 = " + Syoil[yoil] + "요일<br/>");
+}
+</script>

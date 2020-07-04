@@ -1,0 +1,47 @@
+<script type="text/javascript">
+
+function CheckWeight(pname, pheight, pweight)
+{
+	this.pname = pname;
+	this.pheight = pheight;
+	this.pweight = pweight;
+	this.min_weight;
+	this.max_weight;
+
+	this.getCheckR = function()
+	{
+		var str = "이름 : ";
+		str += this.pname + ", 키 : ";
+		str += this.pheight + ", 몸무게 : ";
+		str += this.pweight + ", ";
+
+		this.min_weight = (this.pheight - 100) * 0.9 - 5;
+		this.max_weight = (this.pheight - 100) * 0.9 + 5;
+		
+		var myweight, totstr;
+
+		if (this.pweight > this.max_weight)
+		{
+			myweight = "과체중";
+		}
+		else if (this.pweight >= this.min_weight && this.pweight <= this.max_weight)
+		{
+			myweight = "정상 몸무게";
+		}
+		else
+		{
+			myweight = "저체중";
+		}
+
+		 totstr = str + myweight + " 입니다.";
+
+		 return totstr + "<br>";
+	}
+}
+
+var jang = new CheckWeight("장보리", 168, 62);
+var park = new CheckWeight("박달재", 180, 80);
+
+document.write(jang.getCheckR());
+document.write(park.getCheckR());
+</script>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="766b971c-b847-42c5-a77d-a04fdf5770ff" name="localhost" url="http://l.bsks.ac.kr/~p201987062">
+        <fileTransfer rootFolder="/home/p201987062/public_html" accessType="SFTP" host="l.bsks.ac.kr" port="22" sshConfigId="3af94486-6e66-4ceb-ae72-2a6dbef3f797" sshConfig="p201987062@l.bsks.ac.kr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

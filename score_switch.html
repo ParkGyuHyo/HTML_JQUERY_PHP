@@ -1,0 +1,36 @@
+<script type="text/javascript">
+    var score = prompt("점수를 입력해주세요.", null);
+    var score1, hakjum;
+
+	score = Math.floor(score / 5);
+	
+	switch(score){
+		case 20 : hakjum = "A+";
+		break;
+
+		case 19 : hakjum = "A";
+		break;
+
+		case 18 : hakjum = "B+";
+		break;
+
+		case 17 : hakjum = "B";
+		break;
+
+		case 16 : hakjum = "C+";
+		break;
+
+		case 15 : hakjum = "C";
+		break;
+
+		case 14 : hakjum = "D+";
+		break;
+
+		case 13 : hakjum = "D";
+		break;
+		
+		default : hakjum = "F";
+	}
+
+    document.write( hakjum + " 입니다.");
+</script>

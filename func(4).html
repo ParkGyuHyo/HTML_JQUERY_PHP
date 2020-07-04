@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<title>201987062 박규효 HTML5</title>
+</head>
+<body>
+<script type="text/javascript">
+
+	function txtclear(){
+		var bspan = document.getElementById("bspan");
+
+		bspan.innerHTML = "";
+	}
+
+	function onetoten(){
+		var i = 0;
+		var bspan = document.getElementById("bspan");
+		while (i <= 10)
+		{
+			bspan.innerHTML += i + ", <br>";
+			i++;
+		}
+	}
+
+	function eventxt(){
+		var i = 1;
+		var bspan = document.getElementById("bspan");
+		while (i <= 10)
+		{
+			bspan.innerHTML += i + ", <br>";
+			i += 2;
+		}
+	}
+
+	function oddtxt(){
+		var i = 0;
+		var bspan = document.getElementById("bspan");
+		while (i <= 10)
+		{
+			bspan.innerHTML += i + ", <br>";
+			i += 2;
+		}
+	}
+
+</script>
+
+<button onclick="txtclear();">화면 클리어</button>
+<button onclick="onetoten();">1 ~ 10</button>
+<button onclick="eventxt();">홀수 출력</button>
+<button onclick="oddtxt();">짝수 출력</button>
+
+<hr>
+<span id="bspan"></span>
+
+</body>
+</html>
